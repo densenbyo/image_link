@@ -20,6 +20,16 @@
         padding: 50px;
         font-size: 20px;
     }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 17px;
+    }
+    .button-container button {
+        width: 60px;
+    }
     .text-container h1 {
         text-align: center;
     }
@@ -40,6 +50,12 @@
             <h1>
                 Guide to Tattoo Aftercare
             </h1>
+            <div class="button-container">
+                <p>Choose your language: </p>
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('ru')">RU</button>
+                <button onclick="changeLanguage('cz')">CZ</button>
+            </div>
             <p>
                 By following these simple steps, you’ll ensure that your tattoo heals properly,
                 preserving its beauty and vibrancy for years to come.
@@ -144,5 +160,334 @@
             <img src="ab67616d0000b27356d2e24534150f6919d85325.jfif" alt="" id="image-container-source">
         </div>
     </div>
+    <script>
+        // Object to store the different language translations
+        const translations = {
+            'en': `<h1>
+                Guide to Tattoo Aftercare
+            </h1>
+            <div class="button-container">
+                <p>Choose your language: </p>
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('ru')">RU</button>
+                <button onclick="changeLanguage('cz')">CZ</button>
+            </div>
+            <p>
+                By following these simple steps, you’ll ensure that your tattoo heals properly,
+                preserving its beauty and vibrancy for years to come.
+                Remember, a well-cared-for tattoo is a long-lasting work of art 🤍
+            </p>
+
+            <ol>
+                <li>
+                    <h4>Avoid alcohol for the first 48 hours 🥃</h4>
+                    <p>
+                        It’s important not to consume alcohol during the first 48
+                        hours after getting your tattoo, as it can interfere with
+                        the healing process.
+                    </p>
+                </li>
+                <li>
+                    <h4>Remove the healing bandage on the 5th day 🩹</h4>
+                    <p>
+                        Keep your tattoo covered with the healing bandage
+                        (such as Second Skin) for the first five days.
+                        After this time, carefully remove it to allow the skin
+                        to breathe and continue healing naturally.
+                    </p>
+                </li>
+                <li>
+                    <h4> Refrain from exercising for the first week 🏋🏽</h4>
+                    <p>
+                        Avoid intense physical activities, such as sports or gym
+                        workouts, for at least the first week after getting your
+                        tattoo. Sweat and friction can irritate the fresh tattoo
+                        and increase the risk of infection. Additionally,
+                        stretching the skin too much may lead to complications in
+                        the healing process or distort the design.
+                    </p>
+                </li>
+                <li>
+                    <h4>Keep it clean 🫧</h4>
+                    <p>
+                        After removing the healing bandage, gently wash the area
+                        with mild, unscented soap and lukewarm water.
+                        Pat it dry using a clean towel or paper towel.
+                        Always wash your hands before touching the tattoo to
+                        avoid infection.
+                    </p>
+                </li>
+                <li>
+                    <h4>Apply ointment 🧴</h4>
+                    <p>
+                        Apply a thin layer of ointment, such as Aquaphor or Bepanthen,
+                        or a specialized tattoo aftercare product. Do this 2-3 times
+                        a day for the first week. Avoid using petroleum jelly or
+                        other thick ointments, as they can clog pores and slow the
+                        healing process.
+                    </p>
+                </li>
+                <li>
+                    <h4>Moisturize 💧</h4>
+                    <p>
+                        After the first week, switch to a fragrance-free, hypoallergenic
+                        lotion. Apply it 2-3 times a day to keep the tattoo moisturized,
+                        but not overly saturated.
+                    </p>
+                </li>
+                <li>
+                    <h4>Avoid soaking 🛁</h4>
+                    <p>
+                        Do not submerge your tattoo in water for extended periods.
+                        Avoid swimming pools, hot tubs, baths, and long showers until
+                        the tattoo is fully healed, which usually takes 2-4 weeks.
+                    </p>
+                </li>
+                <li>
+                    <h4>Protect from the sun ☀️</h4>
+                    <p>
+                        Keep your tattoo out of direct sunlight during the healing process.
+                        After it’s fully healed, apply sunscreen with at least SPF 30 to
+                        protect the colors and prevent fading.
+                    </p>
+                </li>
+                <li>
+                    <h4>Don’t scratch or pick 📌</h4>
+                    <p>
+                        Resist the urge to scratch or pick at your tattoo as it heals.
+                        This can cause scarring, infection, or color loss. If the itching
+                        becomes unbearable, gently pat or slap the area instead.
+                    </p>
+                </li>
+                <li>
+                    <h4>Allow for natural peeling🧷</h4>
+                    <p>
+                        Your tattoo will start to peel after about a week, revealing new skin
+                        underneath. This is a normal part of the healing process.
+                        Do not forcibly peel off the skin or scabs—let it come off naturally.
+                    </p>
+                </li>
+            </ol>
+            <h3>
+                By following these steps, you’ll help ensure your tattoo heals beautifully!
+            </h3>`,
+            'ru': `<h1>
+                Уход за татуировкой
+            </h1>
+            <div class="button-container">
+                <p>Выберите язык: </p>
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('ru')">RU</button>
+                <button onclick="changeLanguage('cz')">CZ</button>
+            </div>
+            <p>
+                Следуя этим простым шагам, вы обеспечите правильное заживление татуировки,
+                сохранив её красоту и яркость на долгие годы. Помните, что правильно ухоженная
+                татуировка — это произведение искусства на долгие годы 🤍
+            </p>
+
+            <ol>
+                <li>
+                    <h4>Избегайте алкоголя в течение первых 48 часов 🥃</h4>
+                    <p>
+                        Важно не употреблять алкоголь в течение первых 48 часов после нанесения
+                        татуировки, так как это может повлиять на процесс заживления.
+                    </p>
+                </li>
+                <li>
+                    <h4>Снимите защитную пленку на пятый день 🩹</h4>
+                    <p>
+                        Держите татуировку под защитной пленкой (например, Second Skin)
+                        в течение первых пяти дней. После этого аккуратно снимите её,
+                        чтобы кожа могла дышать и продолжать заживать естественным образом.
+                    </p>
+                </li>
+                <li>
+                    <h4> Воздержитесь от тренировок в течение первой недели 🏋🏽</h4>
+                    <p>
+                        Избегайте интенсивной физической активности, такой как спорт или
+                        занятия в тренажёрном зале, как минимум в течение первой недели
+                        после татуировки. Пот и трение могут раздражать свежую татуировку
+                        и увеличивать риск заражения. Также чрезмерное растягивание кожи
+                        может вызвать осложнения в процессе заживления или исказить рисунок.
+                    </p>
+                </li>
+                <li>
+                    <h4>Держите татуировку в чистоте 🫧</h4>
+                    <p>
+                        После снятия защитной пленки аккуратно промойте область татуировки
+                        мягким, несодержащим ароматизаторов мылом и тёплой водой.
+                        Аккуратно промокните её чистым полотенцем или бумажным полотенцем.
+                        Всегда мойте руки перед тем, как прикасаться к татуировке,
+                        чтобы избежать инфекции.
+                    </p>
+                </li>
+                <li>
+                    <h4>Наносите мазь 🧴</h4>
+                    <p>
+                        Наносите тонкий слой мази, такой как Aquaphor или Bepanthen, либо
+                        специального средства для ухода за татуировками, 2-3 раза в день
+                        в течение первой недели. Избегайте использования вазелина или
+                        других густых мазей, так как они могут закупоривать поры и
+                        замедлять процесс заживления.
+                    </p>
+                </li>
+                <li>
+                    <h4>Увлажняйте 💧</h4>
+                    <p>
+                        После первой недели переходите на гипоаллергенный лосьон без запаха.
+                        Наносите его 2-3 раза в день, чтобы поддерживать кожу увлажнённой,
+                        но не чрезмерно.
+                    </p>
+                </li>
+                <li>
+                    <h4>Избегайте замачивания 🛁</h4>
+                    <p>
+                        Не погружайте татуировку в воду на продолжительное время. Избегайте
+                        бассейнов, горячих ванн, ванн и длительных душей до полного заживления
+                        татуировки, что обычно занимает 2-4 недели.
+                    </p>
+                </li>
+                <li>
+                    <h4>Защищайте от солнца ☀️</h4>
+                    <p>
+                        Держите татуировку вдали от прямых солнечных лучей в процессе заживления.
+                        После полного заживления используйте солнцезащитный крем с SPF 30 или
+                        выше, чтобы защитить цвета и предотвратить их выцветание.
+                    </p>
+                </li>
+                <li>
+                    <h4>Не чешите и не сдирайте 📌</h4>
+                    <p>
+                        Избегайте желания чесать или сдирать корочки с татуировки в процессе
+                        заживления. Это может вызвать появление шрамов, инфекцию или потерю цвета.
+                        Если зуд становится невыносимым, аккуратно похлопайте или слегка ударьте
+                        по области татуировки.
+                    </p>
+                </li>
+                <li>
+                    <h4>Позвольте коже естественно шелушиться 🧷</h4>
+                    <p>
+                        Примерно через неделю ваша татуировка начнет шелушиться, открывая
+                        новую кожу. Это нормальная часть процесса заживления. Не сдирайте
+                        кожу или корочки насильно — дайте им сойти естественным образом.
+                    </p>
+                </li>
+            </ol>
+            <h3>
+                Следуя этим шагам, вы поможете своей татуировке зажить красиво!
+            </h3>`,
+            'cz': `<h1>
+                Péče o tetování
+            </h1>
+            <div class="button-container">
+                <p>Vyberte jazyk: </p>
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('ru')">RU</button>
+                <button onclick="changeLanguage('cz')">CZ</button>
+            </div>
+            <p>
+                Dodržováním těchto jednoduchých kroků zajistíte správné hojení
+                svého tetování, čímž zachováte jeho krásu a živost po mnoho let.
+                Pamatujte, že dobře ošetřované tetování je dlouhotrvající umělecké dílo 🤍
+            </p>
+
+            <ol>
+                <li>
+                    <h4>Vyhněte se alkoholu během prvních 48 hodin 🥃</h4>
+                    <p>
+                        Je důležité nepít alkohol během prvních 48 hodin po
+                        získání tetování, protože může narušit proces hojení.
+                    </p>
+                </li>
+                <li>
+                    <h4>Odstraňte léčivou náplast pátý den 🩹</h4>
+                    <p>
+                        Udržujte tetování zakryté léčivou náplastí
+                        (například Second Skin) prvních pět dní.
+                        Poté ji opatrně odstraňte, aby kůže mohla dýchat
+                        a pokračovat v přirozeném hojení.
+                    </p>
+                </li>
+                <li>
+                    <h4>Vyhněte se cvičení během prvního týdne 🏋🏽</h4>
+                    <p>
+                        Vyhněte se intenzivním fyzickým aktivitám, jako je sport
+                        nebo cvičení v posilovně, alespoň první týden po tetování.
+                        Pot a tření mohou podráždit čerstvé tetování a zvýšit riziko
+                        infekce. Navíc přílišné natahování kůže může vést k
+                        komplikacím v procesu hojení nebo ke zkreslení designu.
+                    </p>
+                </li>
+                <li>
+                    <h4>Udržujte tetování čisté 🫧</h4>
+                    <p>
+                        Po odstranění léčivé náplasti jemně omyjte oblast tetování
+                        jemným, neparfémovaným mýdlem a vlažnou vodou. Osušte čistým
+                        ručníkem nebo papírovým ubrouskem. Vždy si před dotykem
+                        tetování umyjte ruce, abyste předešli infekci.
+                    </p>
+                </li>
+                <li>
+                    <h4>Nanášejte mast 🧴</h4>
+                    <p>
+                        Naneste tenkou vrstvu masti, jako je Aquaphor nebo Bepanthen,
+                        nebo speciální přípravek na péči o tetování. Dělejte to 2–3krát
+                        denně během prvního týdne. Vyhněte se používání vazelíny nebo
+                        jiných hustých mastí, protože mohou ucpávat póry a zpomalovat
+                        proces hojení.
+                    </p>
+                </li>
+                <li>
+                    <h4>Hydratujte 💧</h4>
+                    <p>
+                        Po prvním týdnu přejděte na neparfémovaný, hypoalergenní krém.
+                        Nanášejte ho 2–3krát denně, aby tetování zůstalo hydratované,
+                        ale ne příliš nasycené.
+                    </p>
+                </li>
+                <li>
+                    <h4>Vyhněte se namáčení 🛁</h4>
+                    <p>
+                        Tetování nenamáčejte na delší dobu. Vyhněte se plavání v bazénech,
+                        vířivkách, koupelím a dlouhým sprchám, dokud tetování zcela
+                        nezahojí, což obvykle trvá 2–4 týdny.
+                    </p>
+                </li>
+                <li>
+                    <h4>Chraňte před sluncem ☀️</h4>
+                    <p>
+                        Během hojení držte tetování mimo přímé sluneční světlo.
+                        Po úplném zahojení aplikujte opalovací krém s faktorem alespoň SPF 30,
+                        abyste ochránili barvy a zabránili jejich vyblednutí.
+                    </p>
+                </li>
+                <li>
+                    <h4>Nesahejte, neškrábejte 📌</h4>
+                    <p>
+                        Odolejte pokušení škrábat nebo strhávat tetování během hojení.
+                        Mohlo by to způsobit zjizvení, infekci nebo ztrátu barvy.
+                        Pokud je svědění nesnesitelné, jemně oblast poplácejte nebo lehce poklepejte.
+                    </p>
+                </li>
+                <li>
+                    <h4>Nechte tetování přirozeně se sloupnout 🧷</h4>
+                    <p>
+                        Zhruba po týdnu se začne tetování sloupávat, čímž odhalí novou pokožku
+                        pod ním. To je normální součást hojení. Nesloupávejte pokožku nebo
+                        strupy násilím – nechte je přirozeně odpadnout.
+                    </p>
+                </li>
+            </ol>
+            <h3>
+                Dodržováním těchto kroků pomůžete svému tetování krásně se zahojit!
+            </h3>`
+        };
+
+        function changeLanguage(language) {
+            const textContainer = document.querySelector('.text-container');
+            textContainer.innerHTML = translations[language];
+        }
+    </script>
 </body>
 </html>
